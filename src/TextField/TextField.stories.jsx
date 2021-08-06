@@ -10,21 +10,29 @@ const Template = (args) => <TextField {...args} />;
 
 export const Text = Template.bind({});
 Text.args = {
-	name: 'text',
+	name: 'example_text',
 	variant: 'text',
 	placeholder: 'Some text here...',
 };
 
 export const Contained = Template.bind({});
 Contained.args = {
-	name: 'text',
+	name: 'example_contained',
 	variant: 'contained',
 	placeholder: 'Some text here...',
 };
 
 export const Outlined = Template.bind({});
 Outlined.args = {
-	name: 'text',
+	name: 'example_outlined',
 	variant: 'outlined',
 	placeholder: 'Some text here...',
+};
+
+export const Error = Template.bind({});
+Error.args = {
+	name: 'example_error',
+	variant: 'text',
+	placeholder: 'Some text here...',
+	error: 'An error has occurred...',
 };
