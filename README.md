@@ -1,4 +1,4 @@
-#Tailwind React UI Components
+# Tailwind React UI Components
 
 > Tailwind, React, repeat. A React component library use TailwindCSS.
 
