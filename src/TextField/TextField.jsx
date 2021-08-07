@@ -15,6 +15,7 @@ const style = {
  *
  * ```jsx
  * import React from 'react';
+ * import {TextField} from 'tailwind-react-ui-components';
  *
  * const {example, setExample} = React.useState("");
  *
@@ -22,23 +23,28 @@ const style = {
  * ```
  *
  * ```jsx
- * <TextField name="example" label="Example" value={example}
- * onChange={onChange(e)} variant="text" placeholder="Enter your placeholder
- * here..."/>
+ * <>
+ * 	<TextField name="example" label="Example" value={example}
+ * 	onChange={onChange(e)} variant="text" placeholder="Enter your placeholder
+ * 	here..."/>
+ * </>
  * ```
  *
  * ### Usage with React Hook Form
  *
  * ```jsx
  * import {useForm} from 'react-hook-form';
+ * import {TextField} from 'tailwind-react-ui-components';
  *
  * const {register, formState} = useForm();
  * const {errors} = formState;
  * ```
  *
  * ```jsx
- * <TextField label="Example" disabled={isSubmitting}
- * error={errors.password?.message} {...register('example')}/>
+ * <>
+ * 	<TextField label="Example" disabled={isSubmitting}
+ * 	error={errors.password?.message} {...register('example')}/>
+ * </>
  * ```
  *
  */
@@ -82,7 +88,8 @@ const TextField = React.forwardRef(
 								 classNames(
 									 inputVariantsStyle[variant],
 									 error && classNames('border-red-300', 'text-red-900',
-										 'placeholder-red-300', 'focus:ring-red-500', 'focus:border-red-500'),
+										 'placeholder-red-300', 'focus:ring-red-500',
+										 'focus:border-red-500'),
 								 )
 							 }
 							 ref={ref} name={name} onBlur={onBlur} onChange={onChange} />
